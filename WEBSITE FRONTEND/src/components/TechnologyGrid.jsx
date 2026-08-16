@@ -131,7 +131,7 @@ export const TechnologyGrid = () => {
                     href="#contact"
                     className="blue-variant-apply-btn"
                   >
-                    Explore Stack &rarr;
+                    EXPERT
                   </a>
                 </div>
               </div>
