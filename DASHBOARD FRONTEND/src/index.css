@@ -1,0 +1,6 @@
+/* Root index stylesheet */
+@import './styles/theme.css';
+@import './styles/global.css';
+@import './styles/dashboard.css';
+@import './styles/components.css';
+@import './styles/responsive.css';

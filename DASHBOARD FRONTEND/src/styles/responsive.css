@@ -1,0 +1,60 @@
+/* Responsive Breakpoints & Mobile Adaptations */
+
+@media (max-width: 1200px) {
+  .kanban-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .app-sidebar.show-mobile {
+    transform: translateX(0);
+  }
+
+  .app-main {
+    margin-left: 0 !important;
+  }
+
+  .chat-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .chat-sidebar {
+    height: 250px;
+  }
+
+  .nav-search-btn {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1.25rem 1rem 2rem 1rem;
+  }
+
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+
+  .app-navbar {
+    padding: 0 1rem;
+  }
+
+  .kpi-value {
+    font-size: 1.45rem;
+  }
+
+  .login-glass-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .tensora-table-wrapper {
+    overflow-x: auto;
+  }
+}

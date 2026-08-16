@@ -1,0 +1,269 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'react-toastify/dist/ReactToastify.css';
+@import './theme.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--silver-metallic);
+  font-family: var(--font-primary);
+  font-size: 14.5px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  color: var(--silver-bright);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c2635;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-electric);
+  box-shadow: var(--blue-glow-sm);
+}
+
+/* Common Card Style */
+.tensora-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tensora-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tensora-card:hover {
+  border-color: rgba(0, 168, 255, 0.45);
+  box-shadow: var(--blue-glow-sm), var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.tensora-card:hover::before {
+  opacity: 1;
+}
+
+.tensora-card-elevated {
+  background: var(--bg-card-elevated);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Buttons */
+.btn-tensora-primary {
+  background: linear-gradient(135deg, var(--blue-electric), var(--blue-bright));
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: 0.55rem 1.25rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(0, 87, 255, 0.3);
+}
+
+.btn-tensora-primary:hover, .btn-tensora-primary:focus {
+  background: linear-gradient(135deg, var(--blue-bright), var(--blue-neon));
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 168, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-tensora-secondary {
+  background: rgba(201, 206, 214, 0.06);
+  color: var(--silver-bright);
+  border: 1px solid var(--border-subtle);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  padding: 0.55rem 1.25rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-tensora-secondary:hover {
+  background: rgba(201, 206, 214, 0.12);
+  color: #ffffff;
+  border-color: var(--silver-metallic);
+}
+
+.btn-tensora-outline-blue {
+  background: transparent;
+  color: var(--blue-neon);
+  border: 1px solid var(--border-blue);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  padding: 0.45rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-tensora-outline-blue:hover {
+  background: var(--blue-tint-hover);
+  border-color: var(--blue-neon);
+  color: #ffffff;
+  box-shadow: var(--blue-glow-sm);
+}
+
+.btn-tensora-danger {
+  background: rgba(255, 51, 102, 0.12);
+  color: #ff4d7a;
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  padding: 0.45rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-tensora-danger:hover {
+  background: #ff3366;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border-blue) !important;
+  color: var(--silver-bright) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 0.6rem 0.9rem !important;
+  font-size: 0.9rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--blue-neon) !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.25) !important;
+  outline: none !important;
+}
+
+.form-control::placeholder {
+  color: var(--silver-dark) !important;
+  opacity: 0.7;
+}
+
+.form-label {
+  color: var(--silver-metallic);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Modals */
+.modal-content {
+  background-color: var(--bg-modal) !important;
+  border: 1px solid var(--border-blue-active) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-elevated), var(--blue-glow-md) !important;
+  color: var(--silver-metallic) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-subtle) !important;
+  padding: 1.25rem 1.5rem !important;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-subtle) !important;
+  padding: 1rem 1.5rem !important;
+}
+
+.btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.7;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Badges */
+.badge-status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Pulse Animation */
+@keyframes bluePulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(0, 102, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 102, 255, 0); }
+}
+
+.pulse-indicator {
+  animation: bluePulse 2s infinite;
+}
+
+/* React Toastify Overrides */
+.Toastify__toast-theme--dark {
+  background: var(--bg-card-elevated) !important;
+  color: var(--silver-bright) !important;
+  border: 1px solid var(--border-blue) !important;
+  box-shadow: var(--shadow-elevated), var(--blue-glow-sm) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.Toastify__progress-bar--dark {
+  background: linear-gradient(90deg, var(--blue-deep), var(--blue-neon)) !important;
+}
