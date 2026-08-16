@@ -7,6 +7,7 @@ import { ServiceCard } from '../components/ServiceCard';
 import { ProjectCard } from '../components/ProjectCard';
 import { ProcessTimeline } from '../components/ProcessTimeline';
 import { TechnologyGrid } from '../components/TechnologyGrid';
+import { HomeSkillsSlider } from '../components/HomeSkillsSlider';
 import { TestimonialSlider } from '../components/TestimonialSlider';
 import { PillarFolderCard } from '../components/PillarFolderCard';
 import { CTASection } from '../components/CTASection';
@@ -157,6 +158,7 @@ export const Home = () => {
                 <div className="d-none d-md-flex align-items-center gap-4">
                   <Link to="/about" className="hero-card-nav-link">about us</Link>
                   <Link to="/services" className="hero-card-nav-link">services</Link>
+                  <Link to="/skills" className="hero-card-nav-link">skills</Link>
                   <Link to="/projects" className="hero-card-nav-link">projects</Link>
                   <Link to="/contact" className="hero-card-nav-link">contacts</Link>
                 </div>
@@ -393,18 +395,18 @@ export const Home = () => {
       </section>
 
       {/* ══════════════════════════════════════════════
-          TECHNOLOGY STACK GRID
+          FEATURED SKILLS & TECH SLIDER
       ══════════════════════════════════════════════ */}
-      <section className="py-5" style={{ backgroundColor: 'var(--bg-main)' }}>
+      <section className="py-5 overflow-hidden" style={{ backgroundColor: 'var(--bg-main)' }}>
         <Container fluid="xl" className="py-lg-4">
           <SectionTitle
-            badge="Tech Stack"
-            title="MODERN TOOLS & FRAMEWORKS."
-            subtitle="We utilize industry-standard, bleeding-edge frameworks to craft robust, future-proof software solutions."
+            badge="Tech Stack & Skills"
+            title="FEATURED SKILLS & FRAMEWORKS."
+            subtitle="Explore a rotating showcase of technologies we master. Swipe or hover over cards to pause rotation."
             align="center"
           />
 
-          <TechnologyGrid />
+          <HomeSkillsSlider />
         </Container>
       </section>
 

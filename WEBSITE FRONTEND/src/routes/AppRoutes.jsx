@@ -19,6 +19,7 @@ import { ProjectDetail } from '../pages/ProjectDetail';
 import { ProjectDemo } from '../pages/ProjectDemo';
 import { Careers } from '../pages/Careers';
 import { Contact } from '../pages/Contact';
+import { Skills } from '../pages/Skills';
 
 // Auth Pages
 import { ClientLogin } from '../pages/ClientLogin';
@@ -40,6 +41,7 @@ export const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/careers" element={<Careers />} />

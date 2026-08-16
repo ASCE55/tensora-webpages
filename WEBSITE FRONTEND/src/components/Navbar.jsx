@@ -14,6 +14,7 @@ export const Navbar = () => {
     { name: 'Home', path: '/', icon: 'bi-house-door' },
     { name: 'About', path: '/about', icon: 'bi-building' },
     { name: 'Services', path: '/services', icon: 'bi-cpu' },
+    { name: 'Skills', path: '/skills', icon: 'bi-lightbulb' },
     { name: 'Projects', path: '/projects', icon: 'bi-briefcase' },
     { name: 'Careers', path: '/careers', icon: 'bi-people' },
     { name: 'Contact', path: '/contact', icon: 'bi-envelope' },
